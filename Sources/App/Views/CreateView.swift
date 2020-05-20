@@ -10,8 +10,8 @@ import Plot
 struct CreateView: View {
     var body: Node<HTML.BodyContext> {
         .div(
-            .h1("My website"),
-            .p("Writing HTML in Swift is pretty great!"),
+            .h1("BFTJ Post"),
+            .p("Add a Post"),
             .form(
                 .method(.post),
                 .action("/post"),
