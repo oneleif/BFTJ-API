@@ -19,4 +19,5 @@ public func routes(_ router: Router) throws {
     router.delete("posts", Post.parameter, use: postController.delete)
     
     try router.register(collection: PortalController())
+    try router.register(collection: ImageController())
 }

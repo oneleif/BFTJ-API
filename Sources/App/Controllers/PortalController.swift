@@ -12,7 +12,6 @@ struct BadPostID: Error {
     let description = "BadID"
 }
 
-
 /// Controls basic CRUD operations on `Post`s.
 final class PortalController: RouteCollection {
     func boot(router: Router) throws {
@@ -24,7 +23,8 @@ final class PortalController: RouteCollection {
             try HTML(
                 .head(
                     .title("My website"),
-                    .stylesheet("styles.css")
+                    .stylesheet("styles.css"),
+                    .stylesheet("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
                 ),
                 .body(
                     CreateView().body
@@ -40,7 +40,8 @@ final class PortalController: RouteCollection {
             try HTML(
                 .head(
                     .title("My website"),
-                    .stylesheet("styles.css")
+                    .stylesheet("styles.css"),
+                    .stylesheet("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
                 ),
                 .body(
                     .if($0.isEmpty, .h3("Oh No! There are no posts...")),
